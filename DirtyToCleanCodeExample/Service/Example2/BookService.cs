@@ -112,7 +112,6 @@ namespace Service.Example2
         {
             var startDate = DateTime.Now.AddDays(-daysAgo);
 
-            var reportBuilder = new StringBuilder();
 
             for (int i = 0; i <= daysAgo; i++)
             {
@@ -122,6 +121,7 @@ namespace Service.Example2
                     .GroupBy(br => br.MemberId)
                     .ToListAsync();
 
+                var reportBuilder = new StringBuilder();
                 foreach (var group in borrowRecords)
                 {
                     var user = await _dbContext.Users.FindAsync(group.Key);
@@ -132,9 +132,8 @@ namespace Service.Example2
 
                     reportBuilder.AppendLine($"{user.Username} - ({string.Join(", ", bookTitles)})");
                 }
+                yield return reportBuilder.ToString();
             }
-
-            yield return reportBuilder.ToString();
         }
     }
 }
