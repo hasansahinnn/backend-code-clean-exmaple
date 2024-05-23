@@ -48,6 +48,10 @@ namespace Service.Example1
 
             return true;
         }
+        public async Task<User> GetUserByIdAsync(int userId)
+        {
+           return await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == userId);
+        }
 
     }
 }

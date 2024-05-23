@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj": {}
+    "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj": {}
   },
   "projects": {
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj": {
+    "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj",
+        "projectUniqueName": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj",
-        "packagesPath": "/Users/hasansahin/.nuget/packages/",
-        "outputPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/obj/",
+        "projectPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\cagat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hasansahin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\cagat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -95,26 +102,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj": {
+    "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj",
+        "projectUniqueName": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj",
-        "packagesPath": "/Users/hasansahin/.nuget/packages/",
-        "outputPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/obj/",
+        "projectPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\cagat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hasansahin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\cagat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -127,6 +136,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -190,37 +204,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj": {
+    "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
+        "projectUniqueName": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
-        "packagesPath": "/Users/hasansahin/.nuget/packages/",
-        "outputPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/",
+        "projectPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\cagat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hasansahin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\cagat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj": {
-                "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj"
+              "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj"
               },
-              "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj": {
-                "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj"
+              "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\cagat\\Visual Studio 2022\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj"
               }
             }
           }
@@ -229,6 +245,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -292,7 +313,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
