@@ -14,11 +14,14 @@ namespace Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Comment> Comments { get; set; }
-
-
         public DbSet<Book> Books { get; set; }
         public DbSet<Member> Members { get; set; }
         public DbSet<BorrowRecord> BorrowRecords { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Post>().HasOne(x=>x.User).WithMany(p=>p.Posts).HasForeignKey(x=>x.UserId).OnDelete(DeleteBehavior.Cascade);  
+        }
     }
 }
 

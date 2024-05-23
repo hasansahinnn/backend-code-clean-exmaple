@@ -27,6 +27,12 @@ namespace Data.Example1
         public int PostCount { get; set; }
         public string Email { get; set; }
         public DateTime UpdatedDate { get; set; }
+
+        public static void UpdateEmail(User user,string email)
+        {
+            user.Email = email;
+            user.UpdatedDate = DateTime.Now;
+        }
     }
 
     public class Post

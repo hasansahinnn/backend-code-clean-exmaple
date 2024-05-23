@@ -107,7 +107,12 @@ namespace Service.Example1
         {
             return await _dbContext.Posts.FirstOrDefaultAsync(x => x.Id == postId);
         }
-        
+        public async Task<List<Post>> GetPostsByUserIdWithAsync(int userId)
+        {
+            return await _dbContext.Posts.Where(x=>x.UserId == userId).ToListAsync();
+        }
+
+
     }
 }
 
