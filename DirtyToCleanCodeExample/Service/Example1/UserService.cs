@@ -50,12 +50,10 @@ namespace Service.Example1
             //Parametreye geçilen userId ye sahip postları getirmek için PostService'e GetPostsByUserIdWithAsync fonksiyonu ekledim.
             var userPosts =await _postService.GetPostsByUserIdWithAsync(userId);
             if(userPosts.Count == 0) { return false; }
-            foreach (var post in userPosts)
-            {
-                _dbContext.Posts.Remove(post);
-                //burada her post remove edildiğinde değişiklikler kalıcı olarak veri tabanına kaydediliyor ve performansı düşürüyor.Bide asenkron olarak kullanmalıyız.
-                //SaveChanges metodu tek bir transaction içinde gerçekleştirilir.
-            }
+            
+             //burada her post remove edildiğinde değişiklikler kalıcı olarak veri tabanına kaydediliyor ve performansı düşürüyor.Bide asenkron olarak kullanmalıyız.
+             //SaveChanges metodu tek bir transaction içinde gerçekleştirilir.
+            _dbContext.Posts.RemoveRange(userPosts);
             await _dbContext.SaveChangesAsync();
             return true;
         }
