@@ -1,111 +1,60 @@
-﻿using System;
-using System.Net.NetworkInformation;
+﻿using Core.Example1;
+using Core.ReturnModel;
 using Data;
-using Data.Example1;
+using Data.Repository.Abstract;
+using Data.Repository.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace Service.Example1
 {
-	public class PostService
+	public class PostService : Service<Post>
 	{
-        private readonly DataContext _dbContext;
-        public PostService(IHttpContextAccessor httpContextAccessor, DataContext dbContext)
+        internal new readonly PostRepository repository;
+        public PostService(PostRepository repository, IHttpContextAccessor httpContextAccessor) : base(repository, httpContextAccessor)
         {
-            _dbContext = dbContext;
+            this.repository = repository;
         }
 
-        public async Task<List<Post>> GetPostsAndUsersAsync()
+        public async Task<IReturn<List<Post>>> GetPostsAndUsersAsync()
         {
-            var posts = await _dbContext.Posts.ToListAsync();
-            var postsWithUsers = new List<Post>();
-
-            foreach (var post in posts)
-            {
-                var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == post.UserId);
-                post.User = user;
-                postsWithUsers.Add(post);
-            }
-
-            return postsWithUsers;
+            Console.WriteLine("GetPostsAndUsersAsync servisi çalıştı");
+            var result = await repository.GetPostsAndUsersAsync();
+            Console.WriteLine($"veri geldi durumu = {result.Status} ");
+            return result;
         }
 
-        public async Task<string> CreatePostAsync(int userId, string content)
+        public async Task<IReturn> CreatePostAsync(int userId, string content)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == userId);
-
-            if (user.Role != 1) 
-            {
-                return "Only users can create posts.";
-            }
-
-            var post = new Post
-            {
-                UserId = userId,
-                Content = content,
-                Status = PostStatus.Draft, 
-                CreatedDate = DateTime.Now
-            };
-
-            _dbContext.Posts.Add(post);
-
-            user.PostCount++;
-            _dbContext.Users.Update(user);
-
-            await _dbContext.SaveChangesAsync();
-
-            return "Post created successfully.";
+            Console.WriteLine("Post ekleniyor.");
+            var result = await repository.CreatePostAsync(userId, content);
+            Console.WriteLine($"post ekleme durumu {result.Status}");
+            return result;
         }
 
-        public async Task<string> AddCommentAsync(int postId, int userId, string commentText)
+        public async Task<IReturn> AddCommentAsync(int postId, int userId, string commentText)
         {
-            var post = _dbContext.Posts.ToList().First(x => x.Id == postId);
-
-            var comment = new Comment
-            {
-                PostId = postId,
-                UserId = userId,
-                Text = commentText,
-                CreatedDate = DateTime.Now
-            };
-
-            _dbContext.Comments.Add(comment);
-
-            var allPosts = await _dbContext.Posts.ToListAsync();
-            foreach (var p in allPosts)
-            {
-                if (p.CreatedDate < DateTime.Now.AddDays(-30))
-                {
-                    p.Status = PostStatus.Archived;
-                }
-            }
-
-            await _dbContext.SaveChangesAsync();
-
-            return "Comment added successfully.";
+            Console.WriteLine("AddCommentAsync çalıştı.");
+            var result = await repository.AddCommentAsync(postId, userId, commentText);
+            Console.WriteLine($" durumu {result.Status}");
+            return result;
         }
 
 
-        public async Task<string> PublishPostAsync(int postId, int status)
+        public async Task<IReturn> PublishPostAsync(int postId, int status)
         {
-            var post = await _dbContext.Posts.FirstOrDefaultAsync(x => x.Id == postId);
-
-            post.Status = (PostStatus)status;
-            post.UpdatedDate = DateTime.Now;
-
-            await _dbContext.SaveChangesAsync();
-            return "Post published successfully.";
+            Console.WriteLine("PublishPostAsync çalıştı.");
+            var result = await repository.PublishPostAsync(postId, status);
+            Console.WriteLine($"durumu {result.Status}");
+            return result;
         }
 
-        public async Task<string> Delete(int postId)
+        public async Task<IReturn> Delete(int postId)
         {
-            var post = await _dbContext.Posts.FirstOrDefaultAsync(x => x.Id == postId);
-
-            post.Status = PostStatus.Deleted;
-            post.UpdatedDate = DateTime.Now;
-
-            await _dbContext.SaveChangesAsync();
-            return "Post deleted.";
+            Console.WriteLine("Delete çalıştı.");
+            var result = await repository.DeleteAsync(postId);
+            Console.WriteLine($"durumu {result.Status}");
+            return result;
         }
     }
 }

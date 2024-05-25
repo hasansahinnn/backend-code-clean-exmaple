@@ -1,15 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirtyToCleanCodeExample", "DirtyToCleanCodeExample\DirtyToCleanCodeExample.csproj", "{9D7482D2-36C3-4FE9-8EAD-1D58E2617FDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirtyToCleanCodeExample", "DirtyToCleanCodeExample\DirtyToCleanCodeExample.csproj", "{9D7482D2-36C3-4FE9-8EAD-1D58E2617FDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{2734EE3E-F1B5-4B58-BF3D-A02CDFD2D6E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{2734EE3E-F1B5-4B58-BF3D-A02CDFD2D6E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{AB459005-7C79-4F6D-90D6-454EE8496427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{AB459005-7C79-4F6D-90D6-454EE8496427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{8B0EF883-12F1-4928-B85F-5DC953F4A3D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{8B0EF883-12F1-4928-B85F-5DC953F4A3D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Çözüm Öğeleri", "Çözüm Öğeleri", "{4947F800-8864-401D-82EB-75C327A3F42E}"
+	ProjectSection(SolutionItems) = preProject
+		README_TAHA.md = README_TAHA.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
