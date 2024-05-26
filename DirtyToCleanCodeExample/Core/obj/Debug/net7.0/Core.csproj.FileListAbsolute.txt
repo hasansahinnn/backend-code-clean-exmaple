@@ -10,3 +10,16 @@
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/obj/Debug/net7.0/refint/Core.dll
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/obj/Debug/net7.0/Core.pdb
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/obj/Debug/net7.0/ref/Core.dll
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\bin\Debug\net7.0\Core.deps.json
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\bin\Debug\net7.0\Core.dll
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\bin\Debug\net7.0\Core.pdb
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.sourcelink.json
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.dll
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\refint\Core.dll
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\Core.pdb
+C:\Dosyalar\Kodlama\HWA_DotNet\backend-code-clean-exmaple\DirtyToCleanCodeExample\Core\obj\Debug\net7.0\ref\Core.dll

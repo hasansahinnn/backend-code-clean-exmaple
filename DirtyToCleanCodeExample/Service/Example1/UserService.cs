@@ -1,52 +1,42 @@
-﻿using System;
+﻿using Core.Example1;
+using Core.ReturnModel;
 using Data;
-using Data.Example1;
+using Data.Repository.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace Service.Example1
 {
-	public class UserService
-	{
-        private readonly DataContext _dbContext;
-        public UserService(IHttpContextAccessor httpContextAccessor, DataContext dbContext)
+    public class UserService : Service<User>
+    {
+        internal new readonly UserRepository repository;
+        public UserService(UserRepository repository, IHttpContextAccessor httpContextAccessor) : base(repository, httpContextAccessor)
         {
-            _dbContext = dbContext;
+            this.repository = repository;
         }
 
-        public async Task<string> Update(int userId, string newEmail)
+        public async Task<IReturn> UpdateMailAsync(int userId, string newEmail)
         {
-            var user = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Id == userId);
-
-            user.Email = newEmail;
-            user.UpdatedDate = DateTime.Now;
-
-            await _dbContext.SaveChangesAsync();
-            return "User email updated successfully.";
+            Console.WriteLine("Update User servisi çalıştı");
+            var result = await repository.UpdateMailAsync(userId, newEmail);
+            Console.WriteLine($"durumu = {result.Status} ");
+            return result;
         }
 
-        public async Task<string> Delete(int userId)
+        public async Task<IReturn> DeleteUserPosts(int userId)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == userId);
-
-            _dbContext.Users.Remove(user);
-            await _dbContext.SaveChangesAsync();
-
-            await DeletePost(userId);
-
-            return "User deleted successfully.";
+            Console.WriteLine("delete user posts servisi çalıştı");
+            var result = await repository.DeleteUserPosts(userId);
+            Console.WriteLine($"durumu = {result.Status} ");
+            return result;
         }
 
-        public async Task<bool> DeletePost(int userId)
+        public async Task<IReturn> Delete(int userId)
         {
-            var userPosts = _dbContext.Posts.Where(x => x.UserId == userId).ToList();
-            foreach (var post in userPosts)
-            {
-               _dbContext.Posts.Remove(post);
-               _dbContext.SaveChanges();
-            }
-
-            return true;
+            Console.WriteLine("delete user servisi çalıştı");
+            var result = await repository.DeleteAsync(userId);
+            Console.WriteLine($"durumu = {result.Status} ");
+            return result;
         }
 
     }
