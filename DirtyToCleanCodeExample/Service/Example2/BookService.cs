@@ -34,6 +34,7 @@ namespace Service.Example2
             {
                 var missingBookIds = bookIds.Except(books.Select(b => b.Id));
                 return $"Book(s) with ID(s) {string.Join(", ", missingBookIds)} not found.";
+                // Kayıp kitapları döndürmek yerine, hata mesajında belirtmek daha iyi olabilirdi
             }
 
             foreach (var book in books)
@@ -88,7 +89,7 @@ namespace Service.Example2
                 foreach (var group in borrowRecords)
                 {
                     var user = await _dbContext.Users.FindAsync(group.Key);
-                    if (user == null) 
+                    if (user == null)  // User null ise devam etmek yerine hata mesajı döndürülebilir
                         continue;
                     var bookTitles = await _dbContext.Books
                         .Where(b => group.Any(br => br.BookId == b.Id))
@@ -101,6 +102,5 @@ namespace Service.Example2
             }
         }
 
-        
     }
 }

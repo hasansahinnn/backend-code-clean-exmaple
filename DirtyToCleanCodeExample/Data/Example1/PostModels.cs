@@ -27,7 +27,8 @@ namespace Data.Example1
         public int PostCount { get; set; }
         public string Email { get; set; }
         public DateTime UpdatedDate { get; set; }
-
+        
+        // Kullanıcının postlarını ilişkilendirmek için
         public virtual ICollection<Post> Posts { get; set; }
     }
 

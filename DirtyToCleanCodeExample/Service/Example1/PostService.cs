@@ -16,19 +16,6 @@ namespace Service.Example1
 
         public async Task<List<Post>> GetPostsAndUsersAsync()
         {
-            /*
-             var posts = await _dbContext.Posts.ToListAsync();
-            var postsWithUsers = new List<Post>();
-
-            foreach (var post in posts)
-            {
-                var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == post.UserId);
-                post.User = user;
-                postsWithUsers.Add(post);
-            }
-
-            return postsWithUsers;
-            */
             //Include metodü ile ilişkili tabloyu sorguya dahil edebiliriz.
             var postsWithUsers = await _dbContext.Posts
                 .Include(p => p.User)
@@ -39,8 +26,8 @@ namespace Service.Example1
 
         public async Task<string> CreatePostAsync(int userId, string content)
         {
+            //findAsync sürekli verit banına gitmek yerine, önce bellekte arar ve bulursa veritabanına gitmez.
             var user = await _dbContext.Users.FindAsync(userId);
-            //findAsync sürekli veritbanına gitmek yerine, önce bellekte arar ve bulursa veritabanına gitmez.
 
             //User null olabilir mi kontrolü yapılmalıydı
             if (user == null || user.Role != 1)
@@ -68,7 +55,9 @@ namespace Service.Example1
 
         public async Task<string> AddCommentAsync(int postId, int userId, string commentText)
         {
+            // Tekrar findAsync kullanılabilir.
             var post = await _dbContext.Posts.FindAsync(postId);
+            
             // null kontrolü yapılmalıydı
             if (post == null)
             {
@@ -85,9 +74,10 @@ namespace Service.Example1
 
             _dbContext.Comments.Add(comment);
 
-            //Tüm postları çekmek yerine where sorgusu ile sadece gerekli olanları çekebiliriz.
+            // Tüm postları çekmek yerine where sorgusu ile sadece gerekli olanları çekebiliriz. 
+            // SQL sorgusu daha optimize olacaktır.
             var outdatedPosts = _dbContext.Posts
-                .Where(p => p.CreatedDate < DateTime.Now.AddDays(-30))
+                .Where(p => p.CreatedDate < DateTime.Today.AddDays(-30))
                 .ToList();
 
             outdatedPosts.ForEach(p => p.Status = PostStatus.Archived);
@@ -99,8 +89,10 @@ namespace Service.Example1
 
         public async Task<string> PublishPostAsync(int postId, int status)
         {
+            // findAsync kullanılabilir.
             var post = await _dbContext.Posts.FindAsync(postId);
-
+            
+            //Null kontrolü
             if (post == null)
             {
                 return "Post not found.";

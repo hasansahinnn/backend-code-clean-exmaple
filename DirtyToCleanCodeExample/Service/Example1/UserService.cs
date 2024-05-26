@@ -19,7 +19,7 @@ namespace Service.Example1
 
         public async Task<string> Update(int userId, string newEmail)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            var user = await _dbContext.Users.FindAsync(userId);
 
             //Null kontrolü yapılmalıydı
             if (user == null)
@@ -38,7 +38,7 @@ namespace Service.Example1
         {   
             //
             var user = await _dbContext.Users
-                .Include(u => u.Posts)//postları silmek için direkt olarak include ile çekmeliyiz
+                .Include(u => u.Posts)//postları silmek için direkt olarak include ile çekebiliriz
                 .FirstOrDefaultAsync(x => x.Id == userId);
             
             //null kontrolü 

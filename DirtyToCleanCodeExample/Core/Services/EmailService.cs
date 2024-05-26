@@ -5,6 +5,8 @@ namespace Core.Services;
 
 public class EmailService
 {
+    // Email servisi kullanılarak belirtilen alıcıya e-posta gönderir.
+    // Core katmanında olmasının sebebi businessdan bağımsız olmasıdır. Diğer projelerde de kullanılabilir.
     public async Task SendEmailAsync(string recipient, string subject, string body)
     {
         using var smtpClient = new SmtpClient("smtp.example.com");
