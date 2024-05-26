@@ -15,3 +15,21 @@
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/refint/Service.dll
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.pdb
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/ref/Service.dll
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\bin\Debug\net7.0\Service.deps.json
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\bin\Debug\net7.0\Service.dll
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\bin\Debug\net7.0\Service.pdb
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\bin\Debug\net7.0\Core.dll
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\bin\Debug\net7.0\Data.dll
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\bin\Debug\net7.0\Data.pdb
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\bin\Debug\net7.0\Core.pdb
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.csproj.AssemblyReference.cache
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.AssemblyInfoInputs.cache
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.AssemblyInfo.cs
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.csproj.CoreCompileInputs.cache
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.sourcelink.json
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.csproj.Up2Date
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.dll
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\refint\Service.dll
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\Service.pdb
+C:\Users\malpy\Desktop\HWA\backend-code-clean-exmaple\DirtyToCleanCodeExample\Service\obj\Debug\net7.0\ref\Service.dll
