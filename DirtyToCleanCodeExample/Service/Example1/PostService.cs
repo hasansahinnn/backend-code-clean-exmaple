@@ -1,23 +1,23 @@
-﻿using System;
-using System.Net.NetworkInformation;
+﻿
 using Data;
 using Data.Example1;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
 namespace Service.Example1
 {
-	public class PostService
-	{
+    public class PostService
+    {
         private readonly DataContext _dbContext;
-        public PostService(IHttpContextAccessor httpContextAccessor, DataContext dbContext)
+
+        public PostService(DataContext dbContext)
         {
             _dbContext = dbContext;
         }
 
         public async Task<List<Post>> GetPostsAndUsersAsync()
         {
-            var posts = await _dbContext.Posts.ToListAsync();
+            /*
+             var posts = await _dbContext.Posts.ToListAsync();
             var postsWithUsers = new List<Post>();
 
             foreach (var post in posts)
@@ -28,13 +28,22 @@ namespace Service.Example1
             }
 
             return postsWithUsers;
+            */
+            //Include metodü ile ilişkili tabloyu sorguya dahil edebiliriz.
+            var postsWithUsers = await _dbContext.Posts
+                .Include(p => p.User)
+                .ToListAsync();
+
+            return postsWithUsers;
         }
 
         public async Task<string> CreatePostAsync(int userId, string content)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Id == userId);
+            var user = await _dbContext.Users.FindAsync(userId);
+            //findAsync sürekli veritbanına gitmek yerine, önce bellekte arar ve bulursa veritabanına gitmez.
 
-            if (user.Role != 1) 
+            //User null olabilir mi kontrolü yapılmalıydı
+            if (user == null || user.Role != 1)
             {
                 return "Only users can create posts.";
             }
@@ -43,7 +52,7 @@ namespace Service.Example1
             {
                 UserId = userId,
                 Content = content,
-                Status = PostStatus.Draft, 
+                Status = PostStatus.Draft,
                 CreatedDate = DateTime.Now
             };
 
@@ -59,7 +68,12 @@ namespace Service.Example1
 
         public async Task<string> AddCommentAsync(int postId, int userId, string commentText)
         {
-            var post = _dbContext.Posts.ToList().First(x => x.Id == postId);
+            var post = await _dbContext.Posts.FindAsync(postId);
+            // null kontrolü yapılmalıydı
+            if (post == null)
+            {
+                return "Post not found.";
+            }
 
             var comment = new Comment
             {
@@ -71,42 +85,50 @@ namespace Service.Example1
 
             _dbContext.Comments.Add(comment);
 
-            var allPosts = await _dbContext.Posts.ToListAsync();
-            foreach (var p in allPosts)
-            {
-                if (p.CreatedDate < DateTime.Now.AddDays(-30))
-                {
-                    p.Status = PostStatus.Archived;
-                }
-            }
+            //Tüm postları çekmek yerine where sorgusu ile sadece gerekli olanları çekebiliriz.
+            var outdatedPosts = _dbContext.Posts
+                .Where(p => p.CreatedDate < DateTime.Now.AddDays(-30))
+                .ToList();
+
+            outdatedPosts.ForEach(p => p.Status = PostStatus.Archived);
 
             await _dbContext.SaveChangesAsync();
 
             return "Comment added successfully.";
         }
 
-
         public async Task<string> PublishPostAsync(int postId, int status)
         {
-            var post = await _dbContext.Posts.FirstOrDefaultAsync(x => x.Id == postId);
+            var post = await _dbContext.Posts.FindAsync(postId);
+
+            if (post == null)
+            {
+                return "Post not found.";
+            }
 
             post.Status = (PostStatus)status;
             post.UpdatedDate = DateTime.Now;
 
             await _dbContext.SaveChangesAsync();
+
             return "Post published successfully.";
         }
 
         public async Task<string> Delete(int postId)
         {
-            var post = await _dbContext.Posts.FirstOrDefaultAsync(x => x.Id == postId);
+            var post = await _dbContext.Posts.FindAsync(postId);
+
+            if (post == null)
+            {
+                return "Post not found.";
+            }
 
             post.Status = PostStatus.Deleted;
             post.UpdatedDate = DateTime.Now;
 
             await _dbContext.SaveChangesAsync();
+
             return "Post deleted.";
         }
     }
 }
-

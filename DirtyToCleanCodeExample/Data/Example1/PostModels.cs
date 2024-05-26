@@ -27,6 +27,8 @@ namespace Data.Example1
         public int PostCount { get; set; }
         public string Email { get; set; }
         public DateTime UpdatedDate { get; set; }
+
+        public virtual ICollection<Post> Posts { get; set; }
     }
 
     public class Post
