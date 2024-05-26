@@ -4002,19 +4002,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/hasansahin/.nuget/packages/": {}
+    "/Users/enes/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
+      "projectUniqueName": "/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
       "projectName": "Service",
-      "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
-      "packagesPath": "/Users/hasansahin/.nuget/packages/",
-      "outputPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/",
+      "projectPath": "/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
+      "packagesPath": "/Users/enes/.nuget/packages/",
+      "outputPath": "/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/hasansahin/.nuget/NuGet/NuGet.Config"
+        "/Users/enes/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -4026,11 +4026,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj": {
-              "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj"
+            "/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj": {
+              "projectPath": "/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj"
             },
-            "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj": {
-              "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj"
+            "/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj": {
+              "projectPath": "/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj"
             }
           }
         }
@@ -4102,7 +4102,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -15,3 +15,20 @@
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/refint/Service.dll
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.pdb
 /Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/ref/Service.dll
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/bin/Debug/net7.0/Service.deps.json
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/bin/Debug/net7.0/Service.dll
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/bin/Debug/net7.0/Service.pdb
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/bin/Debug/net7.0/Core.dll
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/bin/Debug/net7.0/Data.dll
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/bin/Debug/net7.0/Data.pdb
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/bin/Debug/net7.0/Core.pdb
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.csproj.AssemblyReference.cache
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.AssemblyInfoInputs.cache
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.AssemblyInfo.cs
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.csproj.CoreCompileInputs.cache
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.csproj.CopyComplete
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.dll
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/refint/Service.dll
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/Service.pdb
+/Users/enes/Documents/GitHub/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/Debug/net7.0/ref/Service.dll

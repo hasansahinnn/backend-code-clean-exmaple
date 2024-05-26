@@ -1,21 +1,22 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using System.Net;
-using System.Net.Mail;
+﻿using System.Text;
+using Core.Services;
 using Data;
-using Microsoft.AspNetCore.Http;
 using Data.Example2;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace Service.Example2
 {
-	public class BookService
-	{
+    public class BookService
+    {
         private readonly DataContext _dbContext;
-        public BookService(IHttpContextAccessor httpContextAccessor, DataContext dbContext)
+        private readonly EmailService _emailService;
+
+        public BookService(DataContext dbContext, EmailService emailService)
         {
             _dbContext = dbContext;
+            _emailService = emailService;
         }
+     
 
         public async Task<string> BorrowBooksAsync(int memberId, List<int> bookIds)
         {
@@ -25,15 +26,15 @@ namespace Service.Example2
                 return "Member not found.";
             }
 
-            var books = new List<Book>();
-            foreach (var bookId in bookIds)
+            var books = await _dbContext.Books
+                .Where(b => bookIds.Contains(b.Id))
+                .ToListAsync();
+
+            if (books.Count != bookIds.Count)
             {
-                var book = await _dbContext.Books.FirstOrDefaultAsync(b => b.Id == bookId);
-                if (book == null)
-                {
-                    return $"Book with ID {bookId} not found.";
-                }
-                books.Add(book);
+                var missingBookIds = bookIds.Except(books.Select(b => b.Id));
+                return $"Book(s) with ID(s) {string.Join(", ", missingBookIds)} not found.";
+                // Kayıp kitapları döndürmek yerine, hata mesajında belirtmek daha iyi olabilirdi
             }
 
             foreach (var book in books)
@@ -47,32 +48,14 @@ namespace Service.Example2
                 _dbContext.BorrowRecords.Add(borrowRecord);
             }
 
-            member.BorrowCount++; 
+            member.BorrowCount++;
             _dbContext.Members.Update(member);
 
             await _dbContext.SaveChangesAsync();
 
             try
             {
-                // E-posta gönderme işlemi, bu mail kesinlikle atilmasi gerekiyor
-                var smtpClient = new SmtpClient("smtp.example.com")
-                {
-                    Port = 587,
-                    Credentials = new NetworkCredential("username", "password"),
-                    EnableSsl = true,
-                };
-
-                var mailMessage = new MailMessage
-                {
-                    From = new MailAddress("library@example.com"),
-                    Subject = "Books Borrowed",
-                    Body = "You have borrowed the following books. Use this Permission Code for Confirmation --> 1421:\n" + string.Join("\n", books.Select(b => b.Title)),
-                    IsBodyHtml = false,
-                };
-                mailMessage.To.Add(member.Email);
-
-                await smtpClient.SendMailAsync(mailMessage);
-
+                await _emailService.SendEmailAsync(member.Email, "Books Borrowed", $"You have borrowed the following books. Use this Permission Code for Confirmation --> 1421:\n{string.Join("\n", books.Select(b => b.Title))}");
             }
             catch (Exception ex)
             {
@@ -82,36 +65,17 @@ namespace Service.Example2
             return "Books borrowed and email sent successfully.";
         }
 
-        public async Task SendEmailsForRecentBorrowersAsync(int daysAgo)
+        private async Task SendEmailsForRecentBorrowersAsync(int daysAgo)
         {
             await foreach (var report in GetRecentBorrowersAsync(daysAgo))
             {
-                using (var smtpClient = new SmtpClient("smtp.example.com")
-                {
-                    Port = 587,
-                    Credentials = new NetworkCredential("username", "password"),
-                    EnableSsl = true,
-                })
-                {
-                    var mailMessage = new MailMessage
-                    {
-                        From = new MailAddress("library@example.com"),
-                        Subject = "Recent Book Borrowers Report",
-                        Body = report,
-                        IsBodyHtml = false,
-                    };
-                    // Burada gerçek e-posta adresini belirtmelisiniz
-                    mailMessage.To.Add("admin@example.com");
-
-                    await smtpClient.SendMailAsync(mailMessage);
-                }
+                await _emailService.SendEmailAsync("admin@example.com", "Recent Book Borrowers Report", report);
             }
         }
 
-        public async IAsyncEnumerable<string> GetRecentBorrowersAsync(int daysAgo)
+        private async IAsyncEnumerable<string> GetRecentBorrowersAsync(int daysAgo)
         {
             var startDate = DateTime.Now.AddDays(-daysAgo);
-
 
             for (int i = 0; i <= daysAgo; i++)
             {
@@ -125,8 +89,10 @@ namespace Service.Example2
                 foreach (var group in borrowRecords)
                 {
                     var user = await _dbContext.Users.FindAsync(group.Key);
+                    if (user == null)  // User null ise devam etmek yerine hata mesajı döndürülebilir
+                        continue;
                     var bookTitles = await _dbContext.Books
-                        .Where(b => group.Select(br => br.BookId).Contains(b.Id))
+                        .Where(b => group.Any(br => br.BookId == b.Id))
                         .Select(b => b.Title)
                         .ToListAsync();
 
@@ -135,6 +101,6 @@ namespace Service.Example2
                 yield return reportBuilder.ToString();
             }
         }
+
     }
 }
-
