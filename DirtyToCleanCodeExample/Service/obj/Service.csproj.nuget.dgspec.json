@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj": {}
+    "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj": {}
   },
   "projects": {
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj": {
+    "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj",
+        "projectUniqueName": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj",
-        "packagesPath": "/Users/hasansahin/.nuget/packages/",
-        "outputPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/obj/",
+        "projectPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\malpy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hasansahin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\malpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,6 +47,10 @@
               "target": "Package",
               "version": "[11.9.1, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
               "version": "[2.2.5, )"
@@ -53,6 +58,18 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
@@ -65,6 +82,10 @@
             "Microsoft.Extensions.Logging": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.6.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -90,137 +111,54 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj": {
+    "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj",
+        "projectUniqueName": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj",
-        "packagesPath": "/Users/hasansahin/.nuget/packages/",
-        "outputPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/obj/",
+        "projectPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\malpy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hasansahin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\malpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.9.1, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Core": {
-              "target": "Package",
-              "version": "[2.2.5, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.15, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Http": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "Serilog": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            },
-            "StackExchange.Redis": {
-              "target": "Package",
-              "version": "[2.7.33, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.201/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
-        "projectName": "Service",
-        "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/Service.csproj",
-        "packagesPath": "/Users/hasansahin/.nuget/packages/",
-        "outputPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Service/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/hasansahin/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj": {
-                "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Core/Core.csproj"
-              },
-              "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj": {
-                "projectPath": "/Users/hasansahin/Desktop/backend kamp/backend-code-clean-exmaple/DirtyToCleanCodeExample/Data/Data.csproj"
+              "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj"
               }
             }
           }
@@ -251,6 +189,16 @@
               "target": "Package",
               "version": "[7.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -287,12 +235,147 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\malpy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\malpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Core\\Core.csproj"
+              },
+              "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\malpy\\Desktop\\HWA\\backend-code-clean-exmaple\\DirtyToCleanCodeExample\\Data\\Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.7.33, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
